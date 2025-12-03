@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-50: #f0f9ff;
+  --color-ocean-100: #e0f2fe;
+  --color-ocean-200: #b9e3fe;
+  --color-ocean-300: #7ccbfd;
+  --color-ocean-400: #36b0fa;
+  --color-ocean-500: #0c95eb;
+  --color-ocean-600: #0276c9;
+  --color-ocean-700: #025ea3;
+  --color-ocean-800: #065186;
+  --color-ocean-900: #0b436f;
+  --color-ocean-950: #072b4a;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-ocean-50 to-teal-50 min-h-screen;
+  }
+}
