@@ -69,7 +69,7 @@ export default function EngineeringPage() {
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4" style={{ color: '#1a3a4d' }}>Engineering Projects</h2>
           <p className="text-lg" style={{ color: '#1a3a4d' }}>
-            Click on any project to learn more about the design, development, and outcomes.
+            Click on any project to learn more about the design process.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function EngineeringPage() {
           <Link
             key={index}
             href={`/engineering/${project.slug}`}
-            className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all p-6 border-l-4 border-seafoam-500 hover:border-seafoam-600 hover:scale-105 cursor-pointer"
+            className="bg-white shadow-md hover:shadow-xl transition-all p-6 border-l-4 border-seafoam-500 hover:border-seafoam-600 hover:scale-105 cursor-pointer"
           >
             <h3 className="text-xl font-bold text-ocean-800 mb-3">{project.title}</h3>
             <div className="mt-4 text-seafoam-600 font-semibold text-sm">
