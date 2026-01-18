@@ -178,17 +178,17 @@ export default function GarminScubaSensorPage() {
 
             <div>
               <h4 className="text-lg font-semibold text-ocean-800 mb-3">D-ring and Velcro Attachment</h4>
-              <p className="text-ocean-700 leading-relaxed">
-                Durable velcro that attaches the D-rings on the device to the D-rings on a diver's vest/Buoyancy Control Device
-              </p>
+              <ul className="space-y-2 text-ocean-700 ml-4">
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  Durable velcro that attaches the D-rings on the device to the D-rings on a diver's vest/Buoyancy Control Device
+                </li>
+              </ul>
             </div>
 
             <div>
-              <ul className="space-y-2 text-ocean-700">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Epoxy coating for waterproofing
-                </li>
+              <h4 className="text-lg font-semibold text-ocean-800 mb-3">Epoxy Coating</h4>
+              <ul className="space-y-2 text-ocean-700 ml-4">
                 <li className="flex items-start">
                   <span className="text-seafoam-500 mr-2">•</span>
                   Successfully watertight even at 1500 meters (Shoutout Dave Haas, PhD @ FaunaLabs for the recommendation!)
