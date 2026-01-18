@@ -5,7 +5,7 @@ export default function AboutPage() {
       style={{ backgroundImage: 'url(/oceanbackground6.jpeg)' }}
     >
       <div className="container mx-auto px-6 py-8">
-        <div className="flex items-center justify-between mb-12" style={{ fontWeight: 'bold', color: '#e8f4f8' }}>
+        <div className="flex items-center justify-between mb-6" style={{ fontWeight: 'bold', color: '#e8f4f8' }}>
           <h1 className="text-3xl">Ainsley Pollock</h1>
           <div className="flex items-center gap-8">
             <nav>
@@ -41,20 +41,31 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 py-12">
-          <div className="md:w-1/2">
-            <div className="p-4 rounded-lg shadow-md" style={{ backgroundColor: '#e8f4f8' }}>
+        <div className="flex flex-col md:flex-row gap-6 pt-4 pb-12 justify-center">
+          <div className="md:w-[43.75%]">
+            <div className="p-4 rounded-lg shadow-md h-full" style={{ backgroundColor: '#e8f4f8', height: 'calc(80vh + 2.4rem + 2mm)' }}>
               <img
                 src="https://goputney.com/wp-content/uploads/2025/07/Ainsley-CGERSW.jpg"
                 alt="Ainsley Pollock"
-                className="w-full h-[75vh] object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
               />
             </div>
           </div>
-          <div className="md:w-1/2 shadow-md p-8 flex items-center rounded-lg" style={{ backgroundColor: '#e8f4f8' }}>
-            <p className="text-ocean-700 leading-relaxed text-lg">
-              Growing up on the coast of Maine, I've always felt most at home in nature, particularly on the water. This love for my environment has sparked a drive to work to protect it. I'm always looking for ways to leverage my technical mechanical engineering background to create climate solutions.
-            </p>
+          <div className="md:w-[43.75%] flex flex-col gap-6" style={{ height: 'calc(65.625vh + 2rem)' }}>
+            <div className="shadow-md p-8 rounded-lg flex items-center" style={{ backgroundColor: '#e8f4f8', flex: '1.2' }}>
+              <p className="text-ocean-700 leading-relaxed text-lg">
+                Growing up on the coast of Maine, I've always felt most at home in nature, particularly on the water. This love for my environment has sparked a drive to work to protect it. I'm always looking for ways to leverage my technical mechanical engineering background to create climate solutions.
+              </p>
+            </div>
+            <div className="shadow-md p-8 rounded-lg flex flex-col items-center justify-center" style={{ backgroundColor: '#e8f4f8', flex: '0.8' }}>
+              <h3 className="text-2xl font-bold text-ocean-800 mb-4 text-center">Professional Experience</h3>
+              <div className="grid grid-cols-2 gap-6 items-center justify-items-center">
+                <img src="/EPAlogo.png" alt="EPA" className="h-24 object-contain" />
+                <img src="/cbl-logo.png" alt="Casco Bay Lines" className="h-24 object-contain" />
+                <img src="/GardensLogo.png" alt="Sarah P. Duke Gardens" className="h-20 object-contain" />
+                <img src="/putney-student-travel.png" alt="Putney Student Travel" className="h-20 object-contain" />
+              </div>
+            </div>
           </div>
         </div>
 
