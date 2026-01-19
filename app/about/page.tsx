@@ -1,9 +1,19 @@
 export default function AboutPage() {
   return (
-    <div
-      className="fixed inset-0 bg-cover bg-center bg-no-repeat overflow-auto"
-      style={{ backgroundImage: 'url(/oceanbackground6.jpeg)' }}
-    >
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .fade-in-page {
+          animation: fadeIn 0.25s ease-in;
+        }
+      `}} />
+      <div
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat overflow-auto fade-in-page"
+        style={{ backgroundImage: 'url(/oceanbackground6.jpeg)' }}
+      >
       <div className="container mx-auto px-6 py-8">
         <div className="flex items-center justify-between mb-6" style={{ fontWeight: 'bold', color: '#e8f4f8' }}>
           <h1 className="text-3xl">Ainsley Pollock</h1>
@@ -73,6 +83,7 @@ export default function AboutPage() {
           <p>Ainsley Pollock - Engineering Portfolio</p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

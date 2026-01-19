@@ -2,10 +2,20 @@ import Link from "next/link";
 
 export default function GarminScubaSensorPage() {
   return (
-    <div
-      className="fixed inset-0 overflow-auto"
-      style={{ backgroundColor: '#1a3a52' }}
-    >
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .fade-in-page {
+          animation: fadeIn 0.25s ease-in;
+        }
+      `}} />
+      <div
+        className="fixed inset-0 overflow-auto fade-in-page"
+        style={{ backgroundColor: '#1a3a52' }}
+      >
       <div className="container mx-auto px-6 py-8">
         <div className="flex items-center justify-between mb-6" style={{ fontWeight: 'bold', color: '#e8f4f8' }}>
           <h1 className="text-3xl">Ainsley Pollock</h1>
@@ -251,6 +261,7 @@ export default function GarminScubaSensorPage() {
           <p>Ainsley Pollock - Engineering Portfolio</p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

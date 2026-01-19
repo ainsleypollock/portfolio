@@ -25,10 +25,20 @@ export default function EngineeringPage() {
   ];
 
   return (
-    <div
-      className="fixed inset-0 bg-cover bg-center bg-no-repeat overflow-auto"
-      style={{ backgroundImage: 'url(/Acadia.JPG)' }}
-    >
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .fade-in-page {
+          animation: fadeIn 0.25s ease-in;
+        }
+      `}} />
+      <div
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat overflow-auto fade-in-page"
+        style={{ backgroundImage: 'url(/Acadia.JPG)' }}
+      >
       <div className="container mx-auto px-6 py-8 min-h-screen flex flex-col">
         <div className="flex items-center justify-between mb-12" style={{ fontWeight: 'bold', color: '#1a3a4d' }}>
           <h1 className="text-3xl">Ainsley Pollock</h1>
@@ -92,6 +102,7 @@ export default function EngineeringPage() {
           <p>Ainsley Pollock - Engineering Portfolio</p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
