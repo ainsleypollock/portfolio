@@ -4,17 +4,8 @@ import ImageCarousel from "./ImageCarousel";
 export default function GarminScubaSensorPage() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in-page {
-          animation: fadeIn 0.25s ease-in;
-        }
-      `}} />
       <div
-        className="fixed inset-0 overflow-auto fade-in-page"
+        className="fixed inset-0 overflow-auto"
         style={{ backgroundColor: '#1a3a52' }}
       >
       <div className="container mx-auto px-6 py-8">
@@ -69,7 +60,7 @@ export default function GarminScubaSensorPage() {
         </div>
 
       <div className="grid gap-8">
-        <div className="bg-white shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <div className="flex gap-6 justify-between">
             <div className="flex flex-col">
               <h3 className="text-3xl font-bold text-ocean-800 mb-4">Problem</h3>
@@ -87,31 +78,31 @@ export default function GarminScubaSensorPage() {
           </div>
         </div>
 
-        <div className="bg-white  shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-3xl font-bold text-ocean-800 mb-4 text-center">Design Criteria</h3>
           <div className="grid grid-cols-3 gap-4 text-ocean-700">
-            <div className="border border-ocean-300 p-4 text-center">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Waterproof to an IPX8 Rating
             </div>
-            <div className="border border-ocean-300 p-4 text-center">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Pressure resistant at 60 ft of depth
             </div>
-            <div className="border border-ocean-300 p-4 text-center">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Battery life of at least 1.5 hours
             </div>
-            <div className="border border-ocean-300 p-4 text-center">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Visibility data displayed to the user wirelessly
             </div>
-            <div className="border border-ocean-300 p-4 text-center">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Ease of use: 90% of users agree that the device was easy to attach data was easy to interpret
             </div>
-            <div className="border border-ocean-300 p-4 text-center">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Wireless charging method
             </div>
           </div>
         </div>
 
-        <div className="bg-white  shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-3xl font-bold text-ocean-800 mb-4">Solution</h3>
           <div className="flex gap-6 justify-center items-stretch">
             <img
@@ -129,7 +120,7 @@ export default function GarminScubaSensorPage() {
           </div>
         </div>
 
-        <div className="bg-white  shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-3xl font-bold text-ocean-800 mb-6">Key Components</h3>
 
           <div className="space-y-6">

@@ -1,19 +1,11 @@
 import Link from "next/link";
+import ImageCarousel from "./ImageCarousel";
 
 export default function GiftsFunPage() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in-page {
-          animation: fadeIn 0.25s ease-in;
-        }
-      `}} />
       <div
-        className="fixed inset-0 overflow-auto fade-in-page"
+        className="fixed inset-0 overflow-auto"
         style={{ backgroundColor: '#1a3a52' }}
       >
       <div className="container mx-auto px-6 py-8">
@@ -68,27 +60,74 @@ export default function GiftsFunPage() {
         </div>
 
       <div className="grid gap-8">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Waldron-opoly</h3>
-          <img
-            src="/Waldronwood.jpg"
-            alt="Waldron-opoly board game"
-            className="w-1/2 mx-auto object-contain"
-          />
-        </div>
-
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Alice's House</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Content coming soon...
+          <p className="text-ocean-700 leading-relaxed mb-6">
+            A gift for some family and a great opportunity to explore Inkscape!
           </p>
+          <div className="grid grid-cols-2 gap-6">
+            <img
+              src="/Waldronwood.jpg"
+              alt="Waldron-opoly board game"
+              className="w-full object-contain"
+              style={{ height: '500px' }}
+            />
+            <img
+              src="/ChanceCards.png"
+              alt="Chance cards"
+              className="w-full object-contain"
+              style={{ height: '500px' }}
+            />
+            <img
+              src="/PrintedPieces.jpg"
+              alt="Printed game pieces"
+              className="w-full object-contain"
+              style={{ height: '500px' }}
+            />
+            <img
+              src="/WaldronInkscape.png"
+              alt="Waldron Inkscape design"
+              className="w-full object-contain"
+              style={{ height: '500px' }}
+            />
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Flour Water Salt Keychains</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Content coming soon...
+          <p className="text-ocean-700 leading-relaxed mb-6">
+            Sourdough loaf keychains as a holiday "Thank You" to bakery employees
           </p>
+          <div className="flex justify-center">
+            <ImageCarousel
+              images={[
+                { src: "/FWSFull.jpg", alt: "Flour Water Salt Keychains Full View" },
+                { src: "/FWSSide.jpg", alt: "Flour Water Salt Keychains Side View" },
+                { src: "/FWSKeychains.jpg", alt: "Flour Water Salt Keychains" }
+              ]}
+            />
+          </div>
+        </div>
+
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Alice's House</h3>
+          <p className="text-ocean-700 leading-relaxed mb-6">
+            Onshape model of a family member's house
+          </p>
+          <div className="flex gap-6 items-end justify-center">
+            <img
+              src="/AliceHouseFront.png"
+              alt="Alice's House Front View"
+              className="object-contain"
+              style={{ maxHeight: '400px', maxWidth: '50%' }}
+            />
+            <img
+              src="/AliceHouseBack.png"
+              alt="Alice's House Back View"
+              className="object-contain"
+              style={{ maxHeight: '400px', maxWidth: '50%' }}
+            />
+          </div>
         </div>
       </div>
 

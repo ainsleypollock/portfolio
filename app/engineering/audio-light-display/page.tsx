@@ -3,17 +3,8 @@ import Link from "next/link";
 export default function AudioLightDisplayPage() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in-page {
-          animation: fadeIn 0.25s ease-in;
-        }
-      `}} />
       <div
-        className="fixed inset-0 overflow-auto fade-in-page"
+        className="fixed inset-0 overflow-auto"
         style={{ backgroundColor: '#1a3a52' }}
       >
       <div className="container mx-auto px-6 py-8">
@@ -68,38 +59,48 @@ export default function AudioLightDisplayPage() {
         </div>
 
       <div className="grid gap-8">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <p className="text-ocean-700 leading-relaxed mb-4">
             This project was the culmination of a semester investigating analog electronics components. The result was a device that converted audio output, in this case music from my laptop, to an LED light show. The lights corresponded to the lower frequencies (often the bassline) in the song.
           </p>
-          <p className="text-ocean-700 leading-relaxed">
-            The project was an exploration of the following components:
-          </p>
-          <ul className="space-y-2 text-ocean-700 mt-4 ml-4">
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Op Amps
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Filters
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              MOSFETs
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Voltage regulators
-            </li>
-          </ul>
+          <div className="flex gap-6 items-start">
+            <div className="flex-1">
+              <p className="text-ocean-700 leading-relaxed mb-4">
+                The project was an exploration of the following components:
+              </p>
+              <ul className="space-y-2 text-ocean-700 ml-4">
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  Op Amps
+                </li>
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  Filters
+                </li>
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  MOSFETs
+                </li>
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  Voltage regulators
+                </li>
+              </ul>
+            </div>
+            <img
+              src="/PhysicsCircuit2.png"
+              alt="Physics Circuit"
+              className="w-96 h-auto shadow-md"
+            />
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Watch the Circuit in Action</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Video coming soon...
-          </p>
+          <video controls className="w-full shadow-md">
+            <source src="/Bitesthedust.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
 

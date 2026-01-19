@@ -3,17 +3,8 @@ import Link from "next/link";
 export default function DukeGardensDisplayPage() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in-page {
-          animation: fadeIn 0.25s ease-in;
-        }
-      `}} />
       <div
-        className="fixed inset-0 overflow-auto fade-in-page"
+        className="fixed inset-0 overflow-auto"
         style={{ backgroundColor: '#1a3a52' }}
       >
       <div className="container mx-auto px-6 py-8">
@@ -68,82 +59,90 @@ export default function DukeGardensDisplayPage() {
         </div>
 
       <div className="grid gap-8">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Problem</h3>
-          <p className="text-ocean-700 leading-relaxed">
+          <p className="text-ocean-700 leading-relaxed mb-6">
             The education staff at the Duke Gardens teaches lessons on how water flows through different soil types (gravel, sand, silt, and clay). However, they were using small-scale demonstrations with cups of real soil and water. These demonstrations were messy and a hassle to bring to educational conferences and workshops. They were also hard for large groups of students due to their size.
           </p>
+          <div className="flex flex-col items-center">
+            <img
+              src="/GardensOriginalSolution.png"
+              alt="Original Gardens Demonstrations"
+              className="w-96 h-auto object-contain"
+            />
+            <p className="text-ocean-700 text-center mt-2">Original Gardens Demonstration</p>
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Design Criteria</h3>
-          <ul className="space-y-2 text-ocean-700">
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-4 text-center">Design Criteria</h3>
+          <div className="grid grid-cols-3 gap-4 text-ocean-700">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Clearly depicts differences between gravel, sand, silt, and clay particles
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Clearly depicts differences in how water moves through the 4 particle types
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Water/Soil interactions visible from 270 degrees, 20 feet away
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Size: under 8 cubic feet
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Portable: under 20 pounds, ergonomic when carrying
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Weather resistant for outdoor demonstrations
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Easy to conduct demonstration
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Solution</h3>
-          <p className="text-ocean-700 leading-relaxed">
+          <p className="text-ocean-700 leading-relaxed mb-6">
             An LED light display consisting of modular demonstrations to show how water flows through gravel, sand, silt, and clay. The display is still in use today and is one of the few educational materials that the Gardens kept during their renovations.
           </p>
+          <div className="flex justify-center">
+            <img
+              src="/GardensMetrics.png"
+              alt="Gardens Metrics"
+              className="h-auto object-contain"
+              style={{ width: '768px' }}
+            />
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-6">Key Components</h3>
-          <ul className="space-y-2 text-ocean-700">
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-6 text-center">Key Components</h3>
+          <div className="grid grid-cols-3 gap-4 text-ocean-700">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Lasercut wood and acrylic housing
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               3D printed soil particles
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Programmed LEDs
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Arduino-based electrical system
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Rechargeable battery
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Color-coded 3D printed handles for portability
-            </li>
-          </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Watch Display in Action</h3>
+          <video controls className="w-full shadow-md">
+            <source src="/LEDsinAction.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
 

@@ -1,19 +1,11 @@
 import Link from "next/link";
+import ImageCarouselWithCaptions from "./ImageCarouselWithCaptions";
 
 export default function EPAFloodwaterSamplerPage() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in-page {
-          animation: fadeIn 0.25s ease-in;
-        }
-      `}} />
       <div
-        className="fixed inset-0 overflow-auto fade-in-page"
+        className="fixed inset-0 overflow-auto"
         style={{ backgroundColor: '#1a3a52' }}
       >
       <div className="container mx-auto px-6 py-8">
@@ -68,70 +60,62 @@ export default function EPAFloodwaterSamplerPage() {
         </div>
 
       <div className="grid gap-8">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Problem</h3>
           <p className="text-ocean-700 leading-relaxed">
             EPA Researchers track biological and chemical contaminants in floodwater. However, existing water sampling methods required researchers to repeatedly check on their sampling bottles during dangerous flood events to see if the bottles had been filled, wasting time and resources. The EPA was looking for a device to alert researchers when their samples had been collected, so they could avoid unnecessary and potentially unsafe trips into the field.
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Design Criteria</h3>
-          <ul className="space-y-2 text-ocean-700">
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-4 text-center">Design Criteria</h3>
+          <div className="grid grid-cols-2 gap-4 text-ocean-700">
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Accurate timestamp of when the sample was collected
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Waterproof electronics housing
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Durable mechanical components that can withstand flood conditions
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Researchers can remotely access the timestamp data
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Solution</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Photo coming soon…
-          </p>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-6">Key Components</h3>
-          <ul className="space-y-2 text-ocean-700">
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Mayfly Data Logger Microcontroller
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Real-Time Clock
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              C++ code to log timestamp
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Magnetic reed switch
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Sampling bottle and outer housing
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Waterproof Pelican electronics case
-            </li>
-          </ul>
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-6 text-center">Key Components</h3>
+          <ImageCarouselWithCaptions
+            images={[
+              {
+                src: "/Mayfly.jpg",
+                alt: "Mayfly Data Logger Microcontroller",
+                caption: "Mayfly Data Logger Microcontroller"
+              },
+              {
+                src: "/EPASetup2.png",
+                alt: "EPA Sampler Setup",
+                caption: "C++ code to log timestamp"
+              },
+              {
+                src: "/MagneticSwitch.jpg",
+                alt: "Magnetic Reed Switch",
+                caption: "Magnetic reed switch"
+              },
+              {
+                src: "/FloodwaterSampler.jpg",
+                alt: "Floodwater Sampler",
+                caption: "Sampling bottle and outer housing"
+              },
+              {
+                src: "/PelicanHousing2.png",
+                alt: "Pelican Electronics Case",
+                caption: "Waterproof Pelican electronics case"
+              }
+            ]}
+          />
         </div>
       </div>
 

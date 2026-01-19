@@ -26,17 +26,8 @@ export default function EngineeringPage() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in-page {
-          animation: fadeIn 0.25s ease-in;
-        }
-      `}} />
       <div
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat overflow-auto fade-in-page"
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat overflow-auto"
         style={{ backgroundImage: 'url(/Acadia.JPG)' }}
       >
       <div className="container mx-auto px-6 py-8 min-h-screen flex flex-col">
@@ -88,7 +79,8 @@ export default function EngineeringPage() {
           <Link
             key={index}
             href={`/engineering/${project.slug}`}
-            className="bg-white shadow-md hover:shadow-xl transition-all p-6 border-l-4 border-seafoam-500 hover:border-seafoam-600 hover:scale-105 cursor-pointer"
+            className="shadow-md hover:shadow-xl transition-all p-6 border-l-4 border-seafoam-500 hover:border-seafoam-600 hover:scale-105 cursor-pointer"
+            style={{backgroundColor: "#e8f4f8"}}
           >
             <h3 className="text-xl font-bold text-ocean-800 mb-3">{project.title}</h3>
             <div className="mt-4 text-seafoam-600 font-semibold text-sm">
