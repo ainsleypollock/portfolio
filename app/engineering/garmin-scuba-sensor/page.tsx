@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ImageCarousel from "./ImageCarousel";
 
 export default function GarminScubaSensorPage() {
   return (
@@ -68,128 +69,179 @@ export default function GarminScubaSensorPage() {
         </div>
 
       <div className="grid gap-8">
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Problem</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Scuba divers record how far they are able to see underwater after each dive. However, most divers estimate in 5-10 foot increments, leading to unreliable data. Garmin sought out a product to measure and collect data on the water visibility experienced by divers.
-          </p>
+        <div className="bg-white shadow-md p-8">
+          <div className="flex gap-6 justify-between">
+            <div className="flex flex-col">
+              <h3 className="text-3xl font-bold text-ocean-800 mb-4">Problem</h3>
+              <p className="text-ocean-700 leading-relaxed max-w-md text-2xl">
+                Scuba divers record how far they are able to see underwater after each dive. However, most divers estimate in 5-10 foot increments, leading to unreliable data. Garmin sought out a product to measure and collect data on the water visibility experienced by divers.
+              </p>
+            </div>
+            <div className="flex justify-center flex-1 self-stretch overflow-hidden  shadow-md" style={{minHeight: '100%'}}>
+              <img
+                src="/Diver.png"
+                alt="Scuba diver underwater"
+                className="w-auto h-full object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Design Criteria</h3>
-          <ul className="space-y-2 text-ocean-700">
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+        <div className="bg-white  shadow-md p-8">
+          <h3 className="text-3xl font-bold text-ocean-800 mb-4 text-center">Design Criteria</h3>
+          <div className="grid grid-cols-3 gap-4 text-ocean-700">
+            <div className="border border-ocean-300 p-4 text-center">
               Waterproof to an IPX8 Rating
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center">
               Pressure resistant at 60 ft of depth
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Visibility data displayed to the user wirelessly
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
-              Wireless charging method
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center">
               Battery life of at least 1.5 hours
-            </li>
-            <li className="flex items-start">
-              <span className="text-seafoam-500 mr-2">•</span>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center">
+              Visibility data displayed to the user wirelessly
+            </div>
+            <div className="border border-ocean-300 p-4 text-center">
               Ease of use: 90% of users agree that the device was easy to attach data was easy to interpret
-            </li>
-          </ul>
+            </div>
+            <div className="border border-ocean-300 p-4 text-center">
+              Wireless charging method
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">Solution</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Picture coming soon...
-          </p>
+        <div className="bg-white  shadow-md p-8">
+          <h3 className="text-3xl font-bold text-ocean-800 mb-4">Solution</h3>
+          <div className="flex gap-6 justify-center items-stretch">
+            <img
+              src="/FinalDesign.png"
+              alt="Final Design of Garmin Scuba Sensor"
+              className="w-1/2 h-auto  shadow-md"
+            />
+            <div className="w-1/2 overflow-hidden  shadow-md flex items-center">
+              <img
+                src="/GarminTeam.jpeg"
+                alt="Garmin Team"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-6">Key Components</h3>
+        <div className="bg-white  shadow-md p-8">
+          <h3 className="text-3xl font-bold text-ocean-800 mb-6">Key Components</h3>
 
           <div className="space-y-6">
-            <div>
-              <h4 className="text-lg font-semibold text-ocean-800 mb-3">Nylon SLS Printed Housing</h4>
-              <ul className="space-y-2 text-ocean-700 ml-4">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Slots to hold induction charger and battery in place to promote durability
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Slots for the piezoelectric button switches and LED indicator
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Groove for gasket
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Holes for the M4 socket head screws
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Notches to lock the lid in place
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Covering for the turbidity sensor to limit exposure to ambient light
-                </li>
-              </ul>
+            <div className="flex gap-6 items-start">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">Nylon SLS Printed Housing</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Slots to hold induction charger and battery in place to promote durability
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Slots for the piezoelectric button switches and LED indicator
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Groove for gasket
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Holes for the M4 socket head screws
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Notches to lock the lid in place
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Covering for the turbidity sensor to limit exposure to ambient light
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="/GarminFinalHousing.png"
+                alt="Nylon SLS Printed Housing"
+                className="w-64 h-auto  shadow-md"
+              />
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-ocean-800 mb-3">Piezoelectric Buttons for Underwater Use</h4>
-              <ul className="space-y-2 text-ocean-700 ml-4">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  On/Off power switch
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Data collection switch
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Data upload switch
-                </li>
-              </ul>
+            <div className="flex gap-6 items-start -mb-6">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">Piezoelectric Buttons for Underwater Use</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    On/Off power switch
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Data collection switch
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Data upload switch
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="/Piezo.png"
+                alt="Piezoelectric Buttons"
+                className="w-24 h-auto  shadow-md relative z-10 mr-12"
+                style={{transform: 'rotate(90deg)'}}
+              />
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-ocean-800 mb-3">Gasket</h4>
-              <ul className="space-y-2 text-ocean-700 ml-4">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Flat silicone 50A gasket and V-ridge design
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Screws located outside the gasket to eliminate leak paths
-                </li>
-              </ul>
+            <div className="flex gap-6 items-start pt-6">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">Gasket</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Flat silicone 50A gasket and V-ridge design
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Screws located outside the gasket to eliminate leak paths
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Tested underwater in Duke's Hyperbaric Chamber
+                  </li>
+                </ul>
+              </div>
+              <div className="w-64 h-48 overflow-hidden  shadow-md">
+                <img
+                  src="/Hyperbaric.png"
+                  alt="Duke's Hyperbaric Chamber Testing"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-ocean-800 mb-3">Turbidity Sensor</h4>
-              <ul className="space-y-2 text-ocean-700 ml-4">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Detects cloudiness of water by emitting light from one prong and receiving light in the other
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  A lower amount of light detected by the receiver (which occurs in cloudier water) leads to a lower output voltage
-                </li>
-              </ul>
+            <div className="flex gap-6 items-start">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">Turbidity Sensor</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Detects cloudiness of water by emitting light from one prong and receiving light in the other
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    A lower amount of light detected by the receiver (which occurs in cloudier water) leads to a lower output voltage
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="/Turbidity.png"
+                alt="Turbidity Sensor"
+                className="w-64 h-auto  shadow-md"
+              />
             </div>
 
             <div>
@@ -199,32 +251,48 @@ export default function GarminScubaSensorPage() {
               </p>
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-ocean-800 mb-3">ESP32 and SD Card</h4>
-              <ul className="space-y-2 text-ocean-700 ml-4">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Uploads data to a Google Sheet user interface via Bluetooth
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Logs data to SD card for redundancy
-                </li>
-              </ul>
+            <div className="flex gap-6 items-start">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">ESP32 and SD Card</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Uploads data to a Google Sheet user interface via Bluetooth
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Logs data to SD card for redundancy
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="/ESP.png"
+                alt="ESP32 and SD Card"
+                className="w-48 h-auto  shadow-md"
+              />
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-ocean-800 mb-3">Induction Charger and Charging Stand</h4>
-              <ul className="space-y-2 text-ocean-700 ml-4">
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Wireless charging to minimize ports and potential leak paths
-                </li>
-                <li className="flex items-start">
-                  <span className="text-seafoam-500 mr-2">•</span>
-                  Device locks into stand to maintain induction charger alignment in rough environments
-                </li>
-              </ul>
+            <div className="flex gap-6 items-start">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">Induction Charger and Charging Stand</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Wireless charging to minimize ports and potential leak paths
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Device locks into stand to maintain induction charger alignment in rough environments
+                  </li>
+                </ul>
+              </div>
+              <ImageCarousel
+                images={[
+                  { src: '/Induction.png', alt: 'Induction Charger' },
+                  { src: '/ChargingStand.png', alt: 'Charging Stand' },
+                  { src: '/ChargingStandwithlower.png', alt: 'Charging Stand with Lower Component' }
+                ]}
+              />
             </div>
 
             <div>
@@ -246,15 +314,30 @@ export default function GarminScubaSensorPage() {
                 </li>
               </ul>
             </div>
+
+            <div className="flex gap-6 items-start">
+              <div className="flex-1">
+                <h4 className="text-lg font-semibold text-ocean-800 mb-3">Google Sheets UI</h4>
+                <ul className="space-y-2 text-ocean-700 ml-4">
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Data uploaded wirelessly
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-seafoam-500 mr-2">•</span>
+                    Easy-to-use Google Sheet format with Time and Distance data
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="/UI2.png"
+                alt="Google Sheets User Interface"
+                className="w-64 h-auto  shadow-md"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-8">
-          <h3 className="text-2xl font-bold text-ocean-800 mb-4">See How It Works</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            Video coming soon...
-          </p>
-        </div>
       </div>
 
         <div className="py-6 text-center text-sm" style={{ color: '#e8f4f8' }}>
