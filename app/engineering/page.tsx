@@ -32,7 +32,11 @@ export default function EngineeringPage() {
       >
       <div className="container mx-auto px-6 py-8 min-h-screen flex flex-col">
         <div className="flex items-center justify-between mb-12" style={{ fontWeight: 'bold', color: '#1a3a4d' }}>
-          <h1 className="text-3xl">Ainsley Pollock</h1>
+          <h1 className="text-3xl">
+            <Link href="/about" className="hover:opacity-70 transition-opacity">
+              Ainsley Pollock
+            </Link>
+          </h1>
           <div className="flex items-center gap-8">
             <nav>
               <ul className="flex space-x-8">
