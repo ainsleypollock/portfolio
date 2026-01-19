@@ -10,7 +10,11 @@ export default function GiftsFunPage() {
       >
       <div className="container mx-auto px-6 py-8">
         <div className="flex items-center justify-between mb-6" style={{ fontWeight: 'bold', color: '#e8f4f8' }}>
-          <h1 className="text-3xl">Ainsley Pollock</h1>
+          <h1 className="text-3xl">
+            <Link href="/about" className="hover:opacity-70 transition-opacity">
+              Ainsley Pollock
+            </Link>
+          </h1>
           <div className="flex items-center gap-8">
             <nav>
               <ul className="flex space-x-8">
