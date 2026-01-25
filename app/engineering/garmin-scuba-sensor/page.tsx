@@ -98,7 +98,7 @@ export default function GarminScubaSensorPage() {
               Visibility data displayed to the user wirelessly
             </div>
             <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
-              Ease of use: 90% of users agree that the device was easy to attach data was easy to interpret
+              Ease of use: 90% of users state that the device was easy to attach and the data was easy to interpret
             </div>
             <div className="border border-ocean-300 p-4 text-center" style={{backgroundColor: "#e8f4f8"}}>
               Wireless charging method
@@ -121,6 +121,19 @@ export default function GarminScubaSensorPage() {
                 className="w-full h-full object-cover object-center"
               />
             </div>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="text-2xl font-bold text-ocean-800 mb-4">How Does It Work?</h4>
+            <ol className="space-y-2 text-ocean-700 list-decimal list-inside ml-6">
+              <li>Diver attaches the sensor to their Buoyancy Control Device</li>
+              <li>Diver presses the "On/Off" button to turn on the device</li>
+              <li>Diver presses the "Data" button to start logging visibility data and begins their dive</li>
+              <li>Diver concludes dive and presses the "Data" button again to stop data collection</li>
+              <li>Diver presses the "Upload" button and views their data via a Google Sheet</li>
+              <li>Diver presses the "On/Off" button to turn off the device</li>
+              <li>Diver places device on the charging stand to recharge wirelessly</li>
+            </ol>
           </div>
         </div>
 
@@ -241,9 +254,16 @@ export default function GarminScubaSensorPage() {
 
             <div>
               <h4 className="text-lg font-semibold text-ocean-800 mb-3">Turbidity to Visibility Correlation</h4>
-              <p className="text-ocean-700 leading-relaxed">
-                Correlates the cloudiness detected by the sensor to how far the diver can see underwater. Created by collecting visibility data and sensor voltage readings at multiple NC lakes and calculating the relationship.
-              </p>
+              <ul className="space-y-2 text-ocean-700 ml-4">
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  <span>Correlates the cloudiness detected by the sensor to how far the diver can see underwater</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-seafoam-500 mr-2">•</span>
+                  <span>Created by collecting visibility data and sensor voltage readings at multiple NC lakes and calculating the relationship</span>
+                </li>
+              </ul>
             </div>
 
             <div className="flex gap-6 items-start">

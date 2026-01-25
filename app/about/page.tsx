@@ -44,7 +44,7 @@ export default function AboutPage() {
 
         <div className="flex flex-col md:flex-row gap-6 pt-4 pb-12 justify-center">
           <div className="md:w-[43.75%]">
-            <div className="p-4 shadow-md h-full" style={{ backgroundColor: '#e8f4f8', height: 'calc(80vh + 2.4rem + 2mm)' }}>
+            <div className="p-4 shadow-md" style={{ backgroundColor: '#e8f4f8', height: 'calc(80vh + 2.4rem + 2mm)' }}>
               <img
                 src="https://goputney.com/wp-content/uploads/2025/07/Ainsley-CGERSW.jpg"
                 alt="Ainsley Pollock"
@@ -52,20 +52,24 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="md:w-[43.75%] flex flex-col gap-6" style={{ height: 'calc(65.625vh + 2rem)' }}>
-            <div className="shadow-md p-8 flex items-center" style={{ backgroundColor: '#e8f4f8', flex: '1.2' }}>
-              <p className="text-ocean-700 leading-relaxed text-lg">
-                Growing up on the coast of Maine, I've always felt most at home in nature, particularly on the water. This love for my environment has sparked a drive to work to protect it. I'm always looking for ways to leverage my technical mechanical engineering background to create climate solutions.
+          <div className="md:w-[43.75%] flex flex-col gap-6" style={{ height: 'calc(80vh + 2.4rem + 2mm)' }}>
+            <div className="shadow-md p-4 md:p-6 lg:p-8 flex items-center justify-center" style={{ backgroundColor: '#e8f4f8', flex: '1.2', minHeight: 0 }}>
+              <p className="text-ocean-700 leading-relaxed text-sm md:text-base lg:text-lg xl:text-xl text-center">
+                Growing up on the coast of Maine, I developed a deep connection to nature. It's driven me to create technical solutions that allow users to explore, understand, and immerse themselves in their environment.
               </p>
             </div>
-            <div className="shadow-md p-8 flex flex-col items-center justify-center" style={{ backgroundColor: '#e8f4f8', flex: '0.8' }}>
-              <h3 className="text-2xl font-bold text-ocean-800 mb-4 text-center">Professional Experience</h3>
-              <div className="grid grid-cols-2 gap-6 items-center justify-items-center">
-                <img src="/EPAlogo.png" alt="EPA" className="h-24 object-contain" />
-                <img src="/cbl-logo.png" alt="Casco Bay Lines" className="h-24 object-contain" />
-                <img src="/GardensLogo.png" alt="Sarah P. Duke Gardens" className="h-20 object-contain" />
-                <img src="/putney-student-travel.png" alt="Putney Student Travel" className="h-20 object-contain" />
+            <div className="shadow-md p-4 md:p-5 lg:p-7 flex flex-col items-center justify-center" style={{ backgroundColor: '#e8f4f8', flex: '0.8', minHeight: 0 }}>
+              <h3 className="text-base md:text-lg lg:text-xl font-bold text-ocean-800 mb-1 md:mb-2 lg:mb-3 text-center">Professional Experience</h3>
+              <div className="grid grid-cols-2 gap-1.5 md:gap-2 lg:gap-3 items-center justify-items-center w-full px-2">
+                <img src="/EPAlogo.png" alt="EPA" className="max-h-8 md:max-h-10 lg:max-h-12 xl:max-h-14 w-auto object-contain" />
+                <img src="/cbl-logo.png" alt="Casco Bay Lines" className="max-h-8 md:max-h-10 lg:max-h-12 xl:max-h-14 w-auto object-contain" />
+                <img src="/GardensLogo.png" alt="Sarah P. Duke Gardens" className="max-h-6 md:max-h-8 lg:max-h-10 xl:max-h-12 w-auto object-contain" />
+                <img src="/putney-student-travel.png" alt="Putney Student Travel" className="max-h-6 md:max-h-8 lg:max-h-10 xl:max-h-12 w-auto object-contain" />
               </div>
+            </div>
+            <div className="shadow-md p-4 md:p-6 lg:p-8 flex flex-col items-center justify-center" style={{ backgroundColor: '#e8f4f8', flex: '0.8', minHeight: 0 }}>
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-ocean-800 mb-2 md:mb-3 lg:mb-4 text-center">Education</h3>
+              <p className="text-ocean-700 text-sm md:text-base lg:text-lg xl:text-xl text-center">B.S.E. in Mechanical Engineering from Duke University</p>
             </div>
           </div>
         </div>

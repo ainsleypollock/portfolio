@@ -66,9 +66,18 @@ export default function EPAFloodwaterSamplerPage() {
       <div className="grid gap-8">
         <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
           <h3 className="text-2xl font-bold text-ocean-800 mb-4">Problem</h3>
-          <p className="text-ocean-700 leading-relaxed">
-            EPA Researchers track biological and chemical contaminants in floodwater. However, existing water sampling methods required researchers to repeatedly check on their sampling bottles during dangerous flood events to see if the bottles had been filled, wasting time and resources. The EPA was looking for a device to alert researchers when their samples had been collected, so they could avoid unnecessary and potentially unsafe trips into the field.
-          </p>
+          <div className="flex gap-6 items-start">
+            <div className="flex-1">
+              <p className="text-ocean-700 leading-relaxed">
+                EPA Researchers track biological and chemical contaminants in floodwater. However, existing water sampling methods required researchers to repeatedly check on their sampling bottles during dangerous flood events to see if the bottles had been filled, wasting time and resources. The EPA was looking for a device to alert researchers when their samples had been collected, so they could avoid unnecessary and potentially unsafe trips into the field.
+              </p>
+            </div>
+            <img
+              src="/flood.jpg"
+              alt="Flood"
+              className="w-64 h-auto shadow-md"
+            />
+          </div>
         </div>
 
         <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
@@ -87,6 +96,15 @@ export default function EPAFloodwaterSamplerPage() {
               Researchers can remotely access the timestamp data
             </div>
           </div>
+        </div>
+
+        <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
+          <h3 className="text-2xl font-bold text-ocean-800 mb-4">How Does It Work?</h3>
+          <ol className="space-y-2 text-ocean-700 list-decimal list-inside ml-6">
+            <li>Researchers place the device in a flood zone</li>
+            <li>As sampling bottle fills, a floating magnet matches the fill level</li>
+            <li>Once the magnet passes and triggers the reed switch placed at a designated fill level, the microcontroller logs a timestamp, which is relayed to the researcher</li>
+          </ol>
         </div>
 
         <div className="shadow-md p-8" style={{backgroundColor: "#e8f4f8"}}>
